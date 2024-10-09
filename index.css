@@ -58,4 +58,28 @@ nav {
   text-underline-offset: 1rem;
 }
 
-
+.bar {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .bar div {
+    width: 25px;
+    height: 3px;
+    background-color: #0d0c0c;
+    border-radius: 5px;
+  }
+  
+  .bar.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .bar.toggle .line2 {
+    opacity: 0;
+  }
+  
+  .bar.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }

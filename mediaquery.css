@@ -1,0 +1,36 @@
+@media (max-width: 900px) {
+    .container {
+      padding: 0 30px;
+    }
+    .nav-links {
+          position: absolute;
+          right: 0;
+          height: 100vh;
+          top: 0;
+          background-color:aliceblue;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in;
+      }
+  
+      .nav-links li {
+          margin: 20px 0;  
+      }
+  
+      .logo{
+        margin-left: 0px;
+      }
+  
+      .bar {
+          display: flex;
+         
+      }
+  
+      .nav-active {
+          transform: translateX(0%);
+      }
+  }
