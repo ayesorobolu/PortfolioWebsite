@@ -9,13 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <a target="_blank" href="https://icons8.com/icon/13679/java">java logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <nav>
         <div class="logo">Dan.</div>
-
             <ul class="nav-links">
-                <li><a href="#Home">Home</a></li>
+                <li><a href="#Home" class="active">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
@@ -28,6 +31,302 @@
             </div>
       </nav>
 
+      <section id="Home">
+        <div class="container col-xxl-8 px-4 py-5 mt-3" style="width: 100%;">
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
+              <div class="col-10 col-sm-8 col-lg-6" >
+                <img src="./assets/me2 copy.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle image " id="img" alt="Bootstrap Themes"  loading="lazy" style="height: 300px; width: 300px;">
+              </div>
+
+              <div class="col-lg-6" >
+                <h3 class="lh-1 mb-3 txthello" style="padding-left: 0px;" id="home-txt1">Hi, I am</h3>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 textname" id="home-txt2">Ayesoro Daniel</h1>
+                <p class="lead textinfo" id="home-txt3">An experienced frontend developer with a passion for creating visually stunningand user-friendly websites.</p>
+
+                <div class="all-btn">
+                    <button type="button" class="cv-btn" > <a href="./assets/Daniel-Ayesoro-Resume.pdf" target="_blank" style="text-decoration: none; color:white;">Download CV</a> </button>
+                 <button type="button" class="contact-btn"> <a href="#Contact" style="text-decoration: none; color: #4C4B42;">Contact Me</a> </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </section>
+
+
+
+      <section id="About" style="background-color: ; margin-top: 50px; ">
+        <div class="container" style=" left: 0; right: 0; width: 100%; position: relative;  ">
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
+          </div>
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 " id="sec2row">
+              <!-- <div class="col d-flex flex-column align-items-start gap-2" >
+ 
+              </div> -->
+              <div>
+                <img src="./assets/about.jpg" alt="" class="about-pic" height="400px" width="400px" style="border-radius: 10px;">
+              </div>
+
+              <div class="col" >
+                <div class="row">
+                  <div class=" d-flex flex-column">
+                    <!-- <h4 class="fw-semibold text-body-emphasis">Languages</h4> -->
+                    <!-- style="border:#DDCFC8 2px solid; border-radius: 10px; height: 22vh; " -->
+                    <div class="exp-box">
+                      <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #2844a7;"></i> Education</h3>
+                      <div style="padding-left: 5px; display: flex; justify-content: space-between;">
+                        <p >BSc. Information Technology <br> Middlesex University <br>London, United Kingdom <br> <i class="bi bi-calendar-check"></i> 2019-2022 </p>
+                        <p>Associate Degree. Software Engineering <br> Aptech Computer Education <br>Lagos, Nigeria <br> <i class="bi bi-calendar-check" ></i> 2017-2019 </p>
+                      </div>
+
+                    </div>
+
+                    <p class="" style="padding-top: 10px;">I am well-versed in HTML, CSS and JavaScript , and other cutting edge
+                      frameworks and libraries,which allows me to implement interactive features.
+                      Additionally, I have experirence working with content management systems (CMS) like
+                      WordPress.</p>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-5">
+            <h2 class="pb-2 border-bottom">Skills and Experiences</h2>
+            <div class="row">
+              <!-- Technologies Section (Left Column) -->
+              <div class="col-md-6">
+                <div class="row text-center">
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/nodejs.png" alt="NodeJS">
+                    <p>NodeJS</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/vite.png" alt="Tailwind">
+                    <p>Vite</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/plasticine/452/react.png" alt="React">
+                    <p>React</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/git.png" alt="Git">
+                    <p>Git</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/html-5.png" alt="HTML5">
+                    <p>HTML5</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/express-js.png" alt="ExpressJS">
+                    <p>ExpressJS</p>
+                  </div>
+                </div>
+                <div class="row text-center mt-3">
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/javascript.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/kotlin.png" alt="Sass">
+                    <p>Kotlin</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/bootstrap.png" alt="Bootstrap">
+                    <p>Bootstrap</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/java.png" alt="Redux">
+                    <p>Java</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/mongodb.png" alt="MongoDB">
+                    <p>MongoDB</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/css3.png" alt="CSS3">
+                    <p>CSS3</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Section (Right Column) -->
+              <div class="col-md-6">
+                <div class="timeline-year">2019 - 2020</div>
+                <div>
+                  <h3>Junior Android Developer</h3>
+                  <p style="font-size: smaller; color: #DDCFC8;">Truckpoint.ng</p>
+                </div>
+                <div class="card mb-5" style="width: 400px; background-color:  #DDCFC8;">
+                  <div class="card-body">
+                    <h5 class="card-title " style="text-align: center;">Worked as a junior Android Developer</h5>
+      
+                  </div>
+                </div>
+                
+                <div class="timeline-year">2023 - Present </div>
+                <div>
+                  <h3>Working as a Software Engineer</h3>
+                  <p style="font-size: smaller; color: #DDCFC8;">Digital Futures</p>
+                </div>
+                <div class="card mb-5" style="width: 400px; background-color:  #DDCFC8;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">Systems Engineer</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="Projects" style="height: 80vh; padding-top: 20px;">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-body-emphasis">My Projects</h1>
+        </div>
+        <div class="container mt-5">
+          <!-- Outer div housing 3 inner divs -->
+          <div class="row gap-5 justify-content-center">
+    
+            <!-- First Image Container -->
+            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
+              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
+                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-eye"></i></a>
+                 
+                  </div>
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-github"></i></a>
+               
+                  </div>
+
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px">
+                <p><b>Projects</b></p>
+              </div>
+            </div>
+            
+            <!-- Second Image Container -->
+            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
+              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
+                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-eye"></i></a>
+                 
+                  </div>
+                  <div class="icon-circle">
+                    <a href=""> <i class="bi bi-github"></i></a>
+             
+                  </div>
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px">
+                <p><b>Projects</b></p>
+              </div>
+            </div>
+        
+            <!-- Third Image Container -->
+            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
+              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
+                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href="#"> <i class="bi bi-eye"></i></a>
+                   
+                  </div>
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-github"></i> </a>
+                  </div>
+
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px">
+                <p><b>Projects</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+  <section id="Contact" style="background-color:; margin-top: 50px;"> 
+    <div class=" p-3 pb-md-4 mx-auto text-center" style="width: 100%;">
+      <h1 class="display-4 fw-normal ">Contact Me</h1>
+    </div>
+
+    <div class="contact-container" >
+      <div class="form-container">
+              <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" >
+                <p id="nameError" class="error-message"></p>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" >
+                <p id="emailError" class="error-message"></p>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4"></textarea>
+                <p id="messageError" class="error-message"></p>
+    
+                <button type="submit">Submit</button>
+                <p id="formMessage"></p>
+            </form>
+      </div>
+      <div class="contact-info" >
+        <div class="col d-flex align-items-start">
+          <div class="icon-circle fs-4 me-3">
+            <i class="bi bi-telephone-fill" style="color: #DDCFC8;"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Call Me</h3>
+            <p>08109917811 <br> 08101235312 <br> </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3">
+            <i class="bi bi-briefcase-fill" style="color: #DDCFC8;"></i> 
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">E- mail</h3>
+            <p>abrahamayesoro@gmail.com <br>  </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3">
+            <i class="bi bi-geo-alt-fill" style="color: #DDCFC8;"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Location</h3>
+            <p>Road 10, House 6 Yomi Ajetunmobi Street <br> </p>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</section>
+
+
+  <footer class="py-3 ">
+    <ul class="nav justify-content-center list-unstyled d-flex">
+      <li class="px-4" ><a class="text-body-secondary" href="#"> <i class="bi bi-facebook" id="footer-list" ></i></a></li>
+      <li class="px-4" ><a class="text-body-secondary" href="#"><i class="bi bi-linkedin" id="footer-list"></i></a></li>
+      <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-github" id="footer-list"></i></li>
+        <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-instagram" id="footer-list"></i></li>
+    </ul>
+    <br>
+    <h3 class="text-center" style="text-decoration: none;">We provide the best website designs for all our clients</h3>
+    <p class="text-center ">Copyright @ Ayesoro Daniel. All right reserved.</p>
+  </footer>
 
 <script src="main.js"></script>
 </body>

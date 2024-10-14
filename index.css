@@ -1,6 +1,8 @@
 *{
 margin: 0;
-padding: 0;    
+padding: 0;  
+font-family: "Poppins", sans-serif;
+font-style: normal;   
 }
 
 .html{
@@ -8,8 +10,7 @@ scroll-behavior: smooth;
 }
 
 body{
-font-family: "Poppins", sans-serif;
-font-style: normal; 
+position: relative;
 }
 
 nav {
@@ -20,16 +21,16 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
-  background-color: aliceblue;
-  height: 10vh;
-  padding-left: 5px;
-  padding-right: 5px;
+  z-index: 10;
+  background-color:white;
+  padding: 10px;
+  max-width: 100%;
 }
 
 .logo {
-  color:#2844a7;
-  font-size: 32px;
+  font-family:"DM Sans", sans-serif ;
+  color:#000000;
+  font-size: 45px;
   margin-left: 40px;
 }
 
@@ -37,7 +38,8 @@ nav {
   list-style: none;
   display: flex;
   gap: 30px;
-
+ padding-top: 15px;
+ padding-right: 40px;
 }
 
 .nav-links li {
@@ -45,7 +47,7 @@ nav {
 }
 
 .nav-links a {
-  color: #0b0b0b;
+  color: #000000;
   text-decoration: none;
   text-decoration-color: white;
   font-size: 18px;
@@ -53,7 +55,13 @@ nav {
 }
 
 .nav-links a:hover {
-  color:#2844a7;
+  color:#000000;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+.nav-links a.active{
+  color:#000000;
   text-decoration: underline;
   text-underline-offset: 1rem;
 }
@@ -83,3 +91,168 @@ nav {
   .bar.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
+
+  #home{
+    margin-top: 50px;
+    height: 20px;
+  }
+
+  .cv-btn{
+    width: 25%;
+    height: 50px;
+    padding: 10px;
+    background-color:#323232;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .cv-btn:hover {
+    background-color: #e0ddd4e4;
+  }
+
+  .contact-btn{
+    width: 25%;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    border: solid #323232 2px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .tech-icons img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+  .timeline-year {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Icons inside a circle, hidden initially */
+  .icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+
+  .icon-overlay .icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show icons and background on hover */
+  .image-container:hover .icon-overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background on hover */
+  }
+
+.contact-container {
+  width: 90%;
+  display: flex;
+  flex-direction:row;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.error-message {
+  color: red;
+  margin: 5px 0 10px;
+  font-size: 0.9em;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #2844a7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5565e0;
+}
+
+.form-container{
+  margin-bottom: 100px;
+}
+
+.contact-info {
+  flex: 0.5;
+  padding-top: 35px;
+  /* margin-left: 100px; */
+}
+
+.icon {
+  color: #4b72ff;
+}
+
+footer{
+/* background-color: #323232; */
+height: 30vh;
+color: white;
+
+}
+#footer-list{
+  font-size: 30px;
+}
+#footer-list:hover{
+ color: #DDCFC8;  
+}

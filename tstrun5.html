@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    .tech-icons img {
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+    }
+    .timeline-year {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Icons inside a circle, hidden initially */
+    .icon-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 15px;
+      opacity: 0;
+      transition: opacity 0.5s ease, background-color 0.5s ease;
+      background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+
+    .icon-overlay .icon-circle {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Show icons and background on hover */
+    .image-container:hover .icon-overlay {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Technologies Section (Left Column) -->
+      <div class="col-md-6">
+        <h3 class="text-center">Technologies</h3>
+        <div class="row text-center">
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/nodejs.png" alt="NodeJS">
+            <p>NodeJS</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/tailwind-css.png" alt="Tailwind">
+            <p>Tailwind</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/plasticine/452/react.png" alt="React">
+            <p>React</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/git.png" alt="Git">
+            <p>Git</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/html-5.png" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/express-js.png" alt="ExpressJS">
+            <p>ExpressJS</p>
+          </div>
+        </div>
+
+        <div class="row text-center mt-3">
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/javascript.png" alt="JavaScript">
+            <p>JavaScript</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/sass.png" alt="Sass">
+            <p>Sass</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/bootstrap.png" alt="Bootstrap">
+            <p>Bootstrap</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/redux.png" alt="Redux">
+            <p>Redux</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/mongodb.png" alt="MongoDB">
+            <p>MongoDB</p>
+          </div>
+          <div class="col-6 col-md-4 tech-icons">
+            <img src="https://img.icons8.com/color/452/css3.png" alt="CSS3">
+            <p>CSS3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Section (Right Column) -->
+      <div class="col-md-6">
+        <h3 class="text-center">Experience</h3>
+        <div class="timeline-year">2022</div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Full Stack Web Development Intern</h5>
+            <p class="card-text">Edureka</p>
+            <p class="card-text"><small class="text-muted">Full Stack Web Development Internship Program</small></p>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Senior Associate Engineer</h5>
+            <p class="card-text">Atos</p>
+            <p class="card-text"><small class="text-muted">Working as a Javascript Developer</small></p>
+          </div>
+        </div>
+        
+        <div class="timeline-year">2020</div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Systems Engineer</h5>
+            <p class="card-text">Atos</p>
+            <p class="card-text"><small class="text-muted">Worked as a Javascript Developer</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container mt-5">
+      <!-- Outer div housing 3 inner divs -->
+      <div class="row gap-5 justify-content-center">
+
+        <!-- First Image Container -->
+        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh; width: 300px;">
+          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
+            <img src="./assets/about.jpg" alt="Image 1">
+            <div class="icon-overlay">
+              <div class="icon-circle">
+                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
+              </div>
+              <div class="icon-circle">
+                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Second Image Container -->
+        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh;  width: 300px;">
+          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
+            <img src="./assets/about.jpg" alt="Image 2">
+            <div class="icon-overlay">
+              <div class="icon-circle">
+                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
+              </div>
+              <div class="icon-circle">
+                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Third Image Container -->
+        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh; width: 300px;">
+          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
+            <img src="./assets/about.jpg" alt="Image 3">
+            <div class="icon-overlay">
+              <div class="icon-circle">
+                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
+              </div>
+              <div class="icon-circle">
+                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

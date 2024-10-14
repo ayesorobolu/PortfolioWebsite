@@ -1,3 +1,4 @@
+/* For tablets and medium-sized screens (below 900px) */
 @media (max-width: 900px) {
     .container {
       padding: 0 30px;
@@ -34,3 +35,45 @@
           transform: translateX(0%);
       }
   }
+
+  /* For mobile screens (below 600px) */
+
+  /* For extra small mobile screens (below 400px) */
+  @media (max-width: 400px) {
+    .cv-btn{
+        width: 50%;
+      }
+
+      .contact-btn{
+        width: 45%;
+      }
+
+      #img{
+      margin-left: 30px;
+      }
+
+      #home-txt1{
+       display: flex;
+       justify-content: center;
+       text-align: center;
+      }
+
+      #home-txt2{
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+      }
+
+      #home-txt3{
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+      }
+
+      .all-btn{
+        display: flex;
+        justify-content: space-evenly;
+      }
+  }
+
+  
