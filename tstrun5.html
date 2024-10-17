@@ -1,219 +1,1059 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <style>
-    .tech-icons img {
-      width: 80px;
-      height: 80px;
-      margin: 10px;
-    }
-    .timeline-year {
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-
-    .image-container {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
-    }
-
-    .image-container:hover img {
-      transform: scale(1.1);
-    }
-
-    /* Icons inside a circle, hidden initially */
-    .icon-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      gap: 15px;
-      opacity: 0;
-      transition: opacity 0.5s ease, background-color 0.5s ease;
-      background-color: rgba(0, 0, 0, 0); /* Initially transparent */
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-
-    .icon-overlay .icon-circle {
-      width: 50px;
-      height: 50px;
-      background-color: #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      color: #333;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Show icons and background on hover */
-    .image-container:hover .icon-overlay {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background on hover */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- <a target="_blank" href="https://icons8.com/icon/13679/java">java logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
+<style>
+  *{
+margin: 0;
+padding: 0;  
+font-family: "Poppins", sans-serif;
+font-style: normal;   
+scroll-behavior: smooth;
+}
+
+.html{
+scroll-behavior: smooth;
+}
+
+body{
+position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  /* background-color:white; */
+  background-color: #DDCFC8;
+  padding: 10px;
+  max-width: 100%;
+}
+
+.logo {
+  font-family:"DM Sans", sans-serif ;
+  color:#000000;
+  font-size: 45px;
+  margin-left: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+ padding-top: 15px;
+ padding-right: 40px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  text-decoration-color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color:#000000;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+.nav-links a.active{
+  color:#000000;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+.bar {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .bar div {
+    width: 25px;
+    height: 3px;
+    background-color: #0d0c0c;
+    border-radius: 5px;
+  }
+  
+  .bar.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .bar.toggle .line2 {
+    opacity: 0;
+  }
+  
+  .bar.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #home{
+    margin-top: 50px;
+    /* height: 20px; */
+   
+  }
+
+  .cv-btn{
+    width: 25%;
+    height: 50px;
+    padding: 10px;
+    background-color:#323232;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .cv-btn:hover {
+    background-color:#323232d9;
+  }
+
+  .contact-btn{
+    width: 25%;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    border: solid #323232 2px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .contact-btn:hover{
+    background-color: #323232ac;
+    color: #DDCFC8;
+  }
+  .tech-icons img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+  .timeline-year {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+/* 
+  Icons inside a circle, hidden initially
+  .icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+    background-color: rgba(0, 0, 0, 0); Initially transparent
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+
+  .icon-overlay .icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:#DDCFC8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon-circle i{
+    color: black;
+  }
+
+  .icon-circle :hover{
+    color: #DDCFC8;
+  }
+
+  Show icons and background on hover
+  .image-container:hover .icon-overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); Semi-transparent black background on hover
+  } */
+
+.contact-container {
+  width: 90%;
+  display: flex;
+  flex-direction:row;
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.error-message {
+  color: red;
+  margin: 5px 0 10px;
+  font-size: 0.9em;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  background-color: #2844a7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* .all-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 1px; Control button spacing
+} */
+
+button:hover {
+  background-color: #5565e0;
+}
+
+.form-container{
+  margin-bottom: 100px;
+}
+
+.contact-info {
+  flex: 0.5;
+  padding-top: 35px;
+  /* margin-left: 100px; */
+}
+
+.txt-box{
+  width: 400px; 
+  background-color:  #DDCFC8;
+}
+
+#all{
+  border-radius: 20px; 
+  background-color: #fefefe; 
+  height: 45vh; 
+  width: 300px;
+}
+
+footer{
+background-color: #323232;
+height: 30vh;
+
+}
+
+#footer-list{
+  font-size: 30px;
+  color: white;
+}
+#footer-list:hover{
+ color: #DDCFC8;  
+}
+
+/* .scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px); Move down a bit
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; Smooth animation
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0); Bring back to original position
+} */
+.card img {
+            object-fit: cover;
+            height: 300px;
+        }
+
+        /* Media Queries for Various Pixel Sizes */
+        @media (max-width: 1200px) {
+            .card img {
+                height: 220px;
+            }
+        }
+
+
+
+        @media (max-width: 400px) {
+
+        }
+
+        .btn-custom {
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin-top: 10px;
+        }
+
+        .card-img-top{
+         padding: 20px;
+         border-radius: 40px;
+        }
+        #project-card{
+            /* border: black solid 1px; */
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Light shadow for elevation */
+            transition: box-shadow 0.3s ease;
+        }
+
+        #project-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Slightly stronger shadow on hover */
+        }
+
+        .hidden{
+          opacity: 0;
+          filter: blur(5px);
+          transform: translateX(-100%);
+          transition: all 2s;
+        }
+
+        .show{
+          opacity: 1;
+          filter: blur(0);
+          transform: translateX(0);
+        }
+
+/* For tablets and medium-sized screens (below 900px) */
+@media (max-width: 995px) {
+    .container {
+      padding: 0 30px;
+    }
+    .nav-links {
+          position: absolute;
+          right: 0;
+          height: 100vh;
+          top: 0;
+          background-color:aliceblue;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in;
+      }
+  
+      .nav-links li {
+          margin: 20px 0;  
+      }
+  
+      .logo{
+        margin-left: 0px;
+      }
+  
+      .bar {
+          display: flex;
+         
+      }
+  
+      .nav-active {
+          transform: translateX(0%);
+  }
+
+  .contact-container {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .form-container {
+    margin-bottom: 50px;
+  }
+
+  .contact-info {
+    padding-top: 20px;
+  }
+
+  .icon-square, .icon-circle {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+
+/* .col-md-4 {            
+max-width: 100%;
+margin-bottom: 20px;
+} */
+.card img {
+height: 180px;
+}
+
+/* .second-timeline{
+  padding-top: 130px;
+} */
+
+.txt-box{
+  width: 295px;
+}
+
+.col-md-6{
+  /* padding-left: 50px; */
+}
+.about-pic{
+  width: 300px;
+  height: 300px;
+}
+  }
+
+
+  /* @media (max-width: 768px) {
+    #all {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+} */
+
+
+
+  /* For mobile screens (below 600px) */
+  @media (max-width: 600px) {
+    .logo {
+        font-size: 30px;
+    }
+    /* .nav-links a {
+        font-size: 14px;
+    } */
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-container {
+    padding: 0 15px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .about-pic{
+  height:200px; 
+  width:370px;
+
+ }
+
+  button {
+    width: 80%;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+  .card img {
+height: 150px;
+}
+h2 {
+font-size: 1.5rem;
+}
+.btn-custom {
+padding: 4px 10px;
+font-size: 0.8rem;
+ } 
+
+ .txt-box{
+  width: 365px;
+ }
+
+ .cv-btn{
+width: 50%;
+}
+
+.contact-btn{
+width: 45%;
+}
+}
+
+  /* For extra small mobile screens (below 400px) */
+  @media (max-width: 400px) {
+.cv-btn{
+width: 50%;
+}
+
+.contact-btn{
+width: 45%;
+}
+
+#img{
+ margin-left: 30px;
+} 
+
+#home-txt1{
+text-align: center; 
+}
+ 
+#home-txt2{
+ display: flex;
+justify-content: center;
+text-align: center; 
+}
+
+#home-txt3{
+display: flex;
+justify-content: center;
+text-align: center; 
+}
+
+
+/* .all-btn{
+ display: flex;
+justify-content: space-evenly;
+ } */
+
+ .about-pic{
+  height:200px; 
+  width:260px;
+
+ }
+
+ .txt-box{
+  width: 255px;
+ }
+
+ .exp-box-text{
+  flex-direction: column;
+ }
+
+ #all {
+ width: 90%;
+margin-bottom: 20px; 
+}
+
+#all-text{
+  padding-top: 10px;
+}
+
+.card img {
+ height: 130px;
+}
+h2 {
+ font-size: 1.2rem;
+}
+.btn-custom {
+padding: 3px 8px;
+font-size: 0.7rem;
+}
+ .project-row{
+  gap: 20px;
+ }
+}
+
+
+
+
+</style>
 <body>
-  <div class="container mt-5">
-    <div class="row">
-      <!-- Technologies Section (Left Column) -->
-      <div class="col-md-6">
-        <h3 class="text-center">Technologies</h3>
-        <div class="row text-center">
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/nodejs.png" alt="NodeJS">
-            <p>NodeJS</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/tailwind-css.png" alt="Tailwind">
-            <p>Tailwind</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/plasticine/452/react.png" alt="React">
-            <p>React</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/git.png" alt="Git">
-            <p>Git</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/html-5.png" alt="HTML5">
-            <p>HTML5</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/express-js.png" alt="ExpressJS">
-            <p>ExpressJS</p>
-          </div>
-        </div>
+  <div style="width: 100%; position: relative;">
+    <header>
+      <nav>
+        <div class="logo">Dan.</div>
+            <ul class="nav-links">
+                <li><a href="#Home" class="active">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
 
-        <div class="row text-center mt-3">
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/javascript.png" alt="JavaScript">
-            <p>JavaScript</p>
+            <div class="bar">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+      </nav>
+    </header>
+
+
+      <section id="Home" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;">
+        <div class="container col-xxl-8 px-4 py-5 mt-3" style="width: 100%;">
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
+              <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-up" data-aos-delay="700">
+                <img src="./assets/me2 copy.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle image " id="img" alt="Bootstrap Themes"  loading="lazy" style="height: 300px; width: 300px;">
+              </div>
+
+              <div class="col-lg-6" >
+                <h3 class="lh-1 mb-3 txthello" style="padding-left: 0px;" id="home-txt1">Hi, I am</h3>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 textname" id="home-txt2">Ayesoro Daniel</h1>
+                <p class="lead textinfo" id="home-txt3">An experienced frontend developer with a passion for creating visually stunningand user-friendly websites.</p>
+
+                <div class="all-btn">
+                    <button type="button" class="cv-btn" > <a href="./assets/Daniel-Ayesoro-Resume.pdf" target="_blank" style="text-decoration: none; color:white;">Download CV</a> </button>
+                 <button type="button" class="contact-btn"> <a href="#Contact" style="text-decoration: none; color: #4C4B42;">Contact Me</a> </button>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/sass.png" alt="Sass">
-            <p>Sass</p>
+      </section>
+
+
+
+      <section id="About" style=" margin-top: 50px; width: 100%;"class="hidden" >
+        <div class="container" style=" left: 0; right: 0; width: 100%; position: relative;  ">
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
           </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/bootstrap.png" alt="Bootstrap">
-            <p>Bootstrap</p>
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 " id="sec2row">
+              <div >
+                <img src="./assets/about.jpg" alt="" class="about-pic" height="400px" width="400px" style="border-radius: 10px;">
+              </div>
+
+              <div class="col" >
+                <div class="row">
+                  <div class=" d-flex flex-column">
+
+                    <div class="exp-box">
+                      <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #DDCFC8;"></i> Education</h3>
+                      <div style="padding-left: 5px; display: flex; justify-content: space-between; display: flex; flex-direction:column;" class="exp-box-text">
+                        <p >BSc. Information Technology <br> Middlesex University <br>London, United Kingdom <br> <i class="bi bi-calendar-check"></i> 2019-2022 </p>
+                        <p>Associate Degree. Software Engineering <br> Aptech Computer Education <br>Lagos, Nigeria <br> <i class="bi bi-calendar-check" ></i> 2017-2019 </p>
+                      </div>
+
+                    </div>
+
+                    <p class="" style="padding-top: 10px;">I am well-versed in HTML, CSS and JavaScript , and other cutting edge
+                      frameworks and libraries,which allows me to implement interactive features.
+                      Additionally, I have experirence working with content management systems (CMS) like
+                      WordPress.</p>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/redux.png" alt="Redux">
-            <p>Redux</p>
+          <!-- <div class="container col-xxl-8 px-4 py-5" >
+            <div class="row flex-lg-row-reverse align-items-center g-5 px-5">
+              <div class="pricing-header pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
+              </div>
+
+              <div class="col-lg-6 px-5 g-5" >
+                <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #DDCFC8;"></i> Education</h3>
+                <div style="display: flex; flex-direction:column;" class="exp-box-text">
+                  <p >BSc. Information Technology <br> Middlesex University <br>London, United Kingdom <br> <i class="bi bi-calendar-check"></i> 2019-2022 </p>
+                  <p>Associate Degree. Software Engineering <br> Aptech Computer Education <br>Lagos, Nigeria <br> <i class="bi bi-calendar-check" ></i> 2017-2019 </p>
+                </div>
+
+                <p class="lead">I am well-versed in HTML, CSS and JavaScript , and other cutting edge
+                  frameworks and libraries,which allows me to implement interactive features.
+                  Additionally, I have experirence working with content management systems (CMS) like
+                  WordPress.</p>
+              </div>
+
+              <div class="col-10 col-sm-8 col-lg-6 px-5 g-5" >
+                <img src="./assets/about.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  loading="lazy" style="border-radius: 20px; height: 360px; width: 400px; object-fit: cover;">
+              </div>
+            </div>
+          </div> -->
+
+          <div class="container mt-5">
+            <h2 class="pb-2 border-bottom">Skills and Experiences</h2>
+            <div class="row">
+              <!-- Technologies Section (Left Column) -->
+              <div class="col-md-6">
+                <div class="row text-center">
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/nodejs.png" alt="NodeJS">
+                    <p>NodeJS</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/vite.png" alt="Tailwind">
+                    <p>Vite</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/plasticine/452/react.png" alt="React">
+                    <p>React</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/git.png" alt="Git">
+                    <p>Git</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/html-5.png" alt="HTML5">
+                    <p>HTML5</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/express-js.png" alt="ExpressJS">
+                    <p>ExpressJS</p>
+                  </div>
+                </div>
+                <div class="row text-center mt-3">
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/javascript.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/kotlin.png" alt="Sass">
+                    <p>Kotlin</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/bootstrap.png" alt="Bootstrap">
+                    <p>Bootstrap</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="./assets/java.png" alt="Redux">
+                    <p>Java</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/mongodb.png" alt="MongoDB">
+                    <p>MongoDB</p>
+                  </div>
+                  <div class="col-6 col-md-4 tech-icons">
+                    <img src="https://img.icons8.com/color/452/css3.png" alt="CSS3">
+                    <p>CSS3</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Timeline Section (Right Column) -->
+              <div class="col-md-6">
+                <div class="first-timeline">
+                  <div class="timeline-year">2019 - 2020</div>
+                  <div>
+                    <h3>Junior Android Developer</h3>
+                    <p style="font-size: smaller; color: #DDCFC8;">Truckpoint.ng</p>
+                  </div>
+                  <div class="card mb-5 txt-box">
+                    <div class="card-body">
+                      <h5 class="card-title " style="text-align: center;">Worked as a junior Android Developer</h5>
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div class="second-timeline">
+                  <div class="timeline-year">2023 - Present </div>
+                  <div>
+                    <h3>Working as a Software Engineer</h3>
+                    <p style="font-size: smaller; color: #DDCFC8;">Digital Futures</p>
+                  </div>
+                  <div class="card mb-5 txt-box" >
+                    <div class="card-body">
+                      <h5 class="card-title" style="text-align: center;">Systems Engineer</h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/mongodb.png" alt="MongoDB">
-            <p>MongoDB</p>
-          </div>
-          <div class="col-6 col-md-4 tech-icons">
-            <img src="https://img.icons8.com/color/452/css3.png" alt="CSS3">
-            <p>CSS3</p>
-          </div>
+      </section>
+
+      <section id="Projects" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;" class="hidden">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-body-emphasis">My Projects</h1>
         </div>
+        <div class="container mt-5 pb-5">
+          <h2 class="text-center mb-4">Browse My Recent <strong>Projects</strong></h2>
+          <div class="row project-row flex-direction:row" >
+              <!-- Project One -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card">
+                      <img src="./assets/fitnessvault.png" class="card-img-top" alt="Project One">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Fitness Vault</h5>
+                          <a href="https://github.com/Dayesoro/FitnessVault" target="_blank" class="btn btn-outline-dark btn-custom">GitHub</a>
+                          <a href="https://fitnessvault.netlify.app" target="_blank" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Project Two -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card">
+                      <img src="./assets/about.jpg" class="card-img-top" alt="Project Two">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Project Two</h5>
+                          <a href="#" class="btn btn-outline-dark btn-custom">GitHub</a>
+                          <a href="#" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Project Three -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card">
+                      <img src="./assets/about.jpg" class="card-img-top" alt="Project Three" style="">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Project Three</h5>
+                          <a href="#" class="btn btn-outline-dark btn-custom">GitHub</a>
+                          <a href="#" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
+        <!-- <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-body-emphasis">My Projects</h1>
+        </div>
+        <div class="container mt-5 pb-5">
+  
+          <div class="row gap-5 justify-content-center">
+    
+     
+            <div class="col-md-4 " id="all" style="">
+              <div class="image-container" style="border-radius: 5px; padding-top: 25px;">
+                <img src="./assets/fitnessvault.png" alt="Image 3" style="border-radius: 8px; height: 245px">
 
-      <!-- Timeline Section (Right Column) -->
-      <div class="col-md-6">
-        <h3 class="text-center">Experience</h3>
-        <div class="timeline-year">2022</div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Full Stack Web Development Intern</h5>
-            <p class="card-text">Edureka</p>
-            <p class="card-text"><small class="text-muted">Full Stack Web Development Internship Program</small></p>
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href="https://fitnessvault.netlify.app" target="_blank"><i class="bi bi-eye"></i></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="https://github.com/Dayesoro/FitnessVault" target="_blank"><i class="bi bi-github"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px" id="all-text">
+                <p><b>Fitness Vault</b></p>
+              </div>
+            </div>
+            
+
+            <div class="col-md-4" id="all" style="">
+              <div class="image-container" style="border-radius: 5px; padding-top: 25px;">
+                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-eye"></i></a>
+                 
+                  </div>
+                  <div class="icon-circle">
+                    <a href=""> <i class="bi bi-github"></i></a>
+             
+                  </div>
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px">
+                <p><b>Projects</b></p>
+              </div>
+            </div>
+        
+
+            <div class="col-md-4" id="all" style="border-radius: 20px; background-color: #ffffff; height: 45vh; width: 300px;">
+              <div class="image-container" style="border-radius: 5px; padding-top: 25px;">
+                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
+                <div class="icon-overlay">
+                  <div class="icon-circle">
+                    <a href="#"> <i class="bi bi-eye"></i></a>
+                   
+                  </div>
+                  <div class="icon-circle">
+                    <a href=""><i class="bi bi-github"></i> </a>
+                  </div>
+
+                </div>
+              </div>
+              <div style="text-align: center; padding-top: 30px">
+                <p><b>Projects</b></p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+      </section>
+
+  <section id="Contact" style=" margin-top: 50px; width: 100%;" class="hidden" > 
+    <div class=" p-3 pb-md-4 mx-auto text-center" style="width: 100%;">
+      <h1 class="display-4 fw-normal ">Contact Me</h1>
+    </div>
+
+    <div class="contact-container" >
+      <div class="form-container">
+              <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" >
+                <p id="nameError" class="error-message"></p>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" >
+                <p id="emailError" class="error-message"></p>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4"></textarea>
+                <p id="messageError" class="error-message"></p>
+    
+                <button type="submit" class="submit-btn" style="background-color: #323232;">Submit</button>
+                <p id="formMessage"></p>
+            </form>
+      </div>
+      <div class="contact-info" >
+        <div class="col d-flex align-items-start">
+          <div class="icon-circle fs-4 me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-telephone-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;""></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Call Me</h3>
+            <p>07904111066  <br> </p>
           </div>
         </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Senior Associate Engineer</h5>
-            <p class="card-text">Atos</p>
-            <p class="card-text"><small class="text-muted">Working as a Javascript Developer</small></p>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-briefcase-fill" style="color: #ffffff; padding-left: 7px; padding-top: 5px;"></i> 
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">E- mail</h3>
+            <p>danielayesoro18@gmail.com<br>  </p>
+          </div>
+        </div>
+
+        <div class="col d-flex align-items-start">
+          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-geo-alt-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;""></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Location</h3>
+            <p>London, United Kingdom <br> </p>
           </div>
         </div>
         
-        <div class="timeline-year">2020</div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Systems Engineer</h5>
-            <p class="card-text">Atos</p>
-            <p class="card-text"><small class="text-muted">Worked as a Javascript Developer</small></p>
-          </div>
-        </div>
       </div>
-    </div>
   </div>
+</section>
 
-  <section>
-    <div class="container mt-5">
-      <!-- Outer div housing 3 inner divs -->
-      <div class="row gap-5 justify-content-center">
 
-        <!-- First Image Container -->
-        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh; width: 300px;">
-          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
-            <img src="./assets/about.jpg" alt="Image 1">
-            <div class="icon-overlay">
-              <div class="icon-circle">
-                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
-              </div>
-              <div class="icon-circle">
-                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Second Image Container -->
-        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh;  width: 300px;">
-          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
-            <img src="./assets/about.jpg" alt="Image 2">
-            <div class="icon-overlay">
-              <div class="icon-circle">
-                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
-              </div>
-              <div class="icon-circle">
-                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Third Image Container -->
-        <div class="col-md-4" id="all" style="border-radius: 5px; background-color: #333; height: 35vh; width: 300px;">
-          <div class="image-container" style="border-radius: 10px; padding-top: 40px;">
-            <img src="./assets/about.jpg" alt="Image 3">
-            <div class="icon-overlay">
-              <div class="icon-circle">
-                <i class="bi bi-heart"></i> <!-- Example icon: heart -->
-              </div>
-              <div class="icon-circle">
-                <i class="bi bi-eye"></i> <!-- Example icon: eye -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="py-3 " style="">
+    <ul class="nav justify-content-center list-unstyled d-flex">
+      <li class="px-4" ><a class="text-body-secondary" href="#"> <i class="bi bi-facebook" id="footer-list" ></i></a></li>
+      <li class="px-4" ><a class="text-body-secondary" href="https://www.linkedin.com/ayesoro-daniel"><i class="bi bi-linkedin" id="footer-list"></i></a></li>
+      <li class="px-4"><a class="text-body-secondary" href="https://www.GitHub.com/Dayesoro"><i class="bi bi-github" id="footer-list"></i></li>
+        <li class="px-4"><a class="text-body-secondary" href="https://www.instagram.com/a.___daniel/"><i class="bi bi-instagram" id="footer-list"></i></li>
+    </ul>
+    <br>
+    <h3 class="text-center" style="text-decoration: none; color: white;">We provide the best website designs for all our clients</h3>
+    <p class="text-center "  style="color: white;">Copyright @ Ayesoro Daniel. All right reserved.</p>
+  </footer>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script >
+
+const bar = document.querySelector('.bar');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+// Toggle the 'nav-active' class to open and close the menu
+bar.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    bar.classList.toggle('toggle'); // Optionally animate burger icon
+});
+
+// Close the menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        bar.classList.remove('toggle');
+    });
+});
+
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove 'active' class from all links
+        links.forEach(link => link.classList.remove('active'));
+
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
+    });
+});
+
+let sections = document.querySelectorAll('section');
+let navlinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+  sections.forEach(sec =>{
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+
+    if(top >= offset && top < offset + height){
+navlinks.forEach(links => {
+links.classList.remove('active');
+document.querySelector('header nav a[href*= '+ id + ']').classList.add('active');
+});
+    };
+  });
+};
+
+const observer = new IntersectionObserver((entries)  => {
+  entries.forEach ((entry)=> {
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show')
+    }
+  }) ;
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+</script>
 </body>
 </html>

@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <a target="_blank" href="https://icons8.com/icon/13679/java">java logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
+  <div style="width: 100%; position: relative;">
+    <header>
+      <nav>
         <div class="logo">Dan.</div>
             <ul class="nav-links">
                 <li><a href="#Home" class="active">Home</a></li>
@@ -30,12 +31,14 @@
                 <div class="line3"></div>
             </div>
       </nav>
+    </header>
 
-      <section id="Home">
+
+      <section id="Home" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;">
         <div class="container col-xxl-8 px-4 py-5 mt-3" style="width: 100%;">
 
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
-              <div class="col-10 col-sm-8 col-lg-6" >
+              <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-up" data-aos-delay="700">
                 <img src="./assets/me2 copy.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle image " id="img" alt="Bootstrap Themes"  loading="lazy" style="height: 300px; width: 300px;">
               </div>
 
@@ -56,27 +59,23 @@
 
 
 
-      <section id="About" style="background-color: ; margin-top: 50px; ">
+      <section id="About" style=" margin-top: 50px; width: 100%;"class="hidden" >
         <div class="container" style=" left: 0; right: 0; width: 100%; position: relative;  ">
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
           </div>
             <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 " id="sec2row">
-              <!-- <div class="col d-flex flex-column align-items-start gap-2" >
- 
-              </div> -->
-              <div>
+              <div >
                 <img src="./assets/about.jpg" alt="" class="about-pic" height="400px" width="400px" style="border-radius: 10px;">
               </div>
 
               <div class="col" >
                 <div class="row">
                   <div class=" d-flex flex-column">
-                    <!-- <h4 class="fw-semibold text-body-emphasis">Languages</h4> -->
-                    <!-- style="border:#DDCFC8 2px solid; border-radius: 10px; height: 22vh; " -->
+
                     <div class="exp-box">
-                      <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #2844a7;"></i> Education</h3>
-                      <div style="padding-left: 5px; display: flex; justify-content: space-between;">
+                      <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #DDCFC8;"></i> Education</h3>
+                      <div style="padding-left: 5px; display: flex; justify-content: space-between; display: flex; flex-direction:row;" class="exp-box-text">
                         <p >BSc. Information Technology <br> Middlesex University <br>London, United Kingdom <br> <i class="bi bi-calendar-check"></i> 2019-2022 </p>
                         <p>Associate Degree. Software Engineering <br> Aptech Computer Education <br>Lagos, Nigeria <br> <i class="bi bi-calendar-check" ></i> 2017-2019 </p>
                       </div>
@@ -94,6 +93,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="container mt-5">
             <h2 class="pb-2 border-bottom">Skills and Experiences</h2>
@@ -156,107 +156,83 @@
         
               <!-- Timeline Section (Right Column) -->
               <div class="col-md-6">
-                <div class="timeline-year">2019 - 2020</div>
-                <div>
-                  <h3>Junior Android Developer</h3>
-                  <p style="font-size: smaller; color: #DDCFC8;">Truckpoint.ng</p>
+                <div class="first-timeline">
+                  <div class="timeline-year">2019 - 2020</div>
+                  <div>
+                    <h3>Junior Android Developer</h3>
+                    <p style="font-size: smaller; color: #DDCFC8;">Truckpoint.ng</p>
+                  </div>
+                  <div class="card mb-5 txt-box" style="background-color: #DDCFC8;">
+                    <div class="card-body">
+                      <h5 class="card-title " style="text-align: center;">Worked as a junior Android Developer</h5>
+                    </div>
+                  </div>
+                  
                 </div>
-                <div class="card mb-5" style="width: 400px; background-color:  #DDCFC8;">
-                  <div class="card-body">
-                    <h5 class="card-title " style="text-align: center;">Worked as a junior Android Developer</h5>
-      
+
+                <div class="second-timeline">
+                  <div class="timeline-year">2023 - Present </div>
+                  <div>
+                    <h3>Working as a Software Engineer</h3>
+                    <p style="font-size: smaller; color: #DDCFC8;">Digital Futures</p>
+                  </div>
+                  <div class="card mb-5 txt-box"style="background-color: #DDCFC8;" >
+                    <div class="card-body">
+                      <h5 class="card-title" style="text-align: center;">Systems Engineer</h5>
+                    </div>
                   </div>
                 </div>
-                
-                <div class="timeline-year">2023 - Present </div>
-                <div>
-                  <h3>Working as a Software Engineer</h3>
-                  <p style="font-size: smaller; color: #DDCFC8;">Digital Futures</p>
-                </div>
-                <div class="card mb-5" style="width: 400px; background-color:  #DDCFC8;">
-                  <div class="card-body">
-                    <h5 class="card-title" style="text-align: center;">Systems Engineer</h5>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
       </section>
 
-      <section id="Projects" style="height: 80vh; padding-top: 20px;">
+      <section id="Projects" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;" class="hidden">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
           <h1 class="display-4 fw-normal text-body-emphasis">My Projects</h1>
         </div>
-        <div class="container mt-5">
-          <!-- Outer div housing 3 inner divs -->
-          <div class="row gap-5 justify-content-center">
-    
-            <!-- First Image Container -->
-            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
-              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
-                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
-                <div class="icon-overlay">
-                  <div class="icon-circle">
-                    <a href=""><i class="bi bi-eye"></i></a>
-                 
+        <div class="container mt-5 pb-5">
+          <h2 class="text-center mb-4">Browse My Recent <strong>Projects</strong></h2>
+          <div class="row project-row flex-direction:row" >
+              <!-- Project One -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card" >
+                      <img src="./assets/fitnessvault.png"  alt="Project One" style="border-radius: 40px; padding: 15px;">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Fitness Vault</h5>
+                          <a href="https://github.com/Dayesoro/FitnessVault" target="_blank" class="btn btn-outline-dark btn-custom">GitHub</a>
+                          <a href="https://fitnessvault.netlify.app" target="_blank" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
                   </div>
-                  <div class="icon-circle">
-                    <a href=""><i class="bi bi-github"></i></a>
-               
+              </div>
+              <!-- Project Two -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card">
+                      <img src="./assets/about.jpg" class="card-img-top" alt="Project Two">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Project Two</h5>
+                          <a href="#" class="btn btn-outline-dark btn-custom">GitHub</a>
+                          <a href="#" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
                   </div>
-
-                </div>
               </div>
-              <div style="text-align: center; padding-top: 30px">
-                <p><b>Projects</b></p>
-              </div>
-            </div>
-            
-            <!-- Second Image Container -->
-            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
-              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
-                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
-                <div class="icon-overlay">
-                  <div class="icon-circle">
-                    <a href=""><i class="bi bi-eye"></i></a>
-                 
+              <!-- Project Three -->
+              <div class="col-md-4">
+                  <div class="card" id="project-card">
+                      <img src="./assets/about.jpg" class="card-img-top" alt="Project Three" style="">
+                      <div class="card-body text-center">
+                          <h5 class="card-title">Project Three</h5>
+                          <a href="#" class="btn btn-outline-dark btn-custom" style="">GitHub</a>
+                          <a href="#" class="btn btn-outline-dark btn-custom">Live Demo</a>
+                      </div>
                   </div>
-                  <div class="icon-circle">
-                    <a href=""> <i class="bi bi-github"></i></a>
-             
-                  </div>
-                </div>
               </div>
-              <div style="text-align: center; padding-top: 30px">
-                <p><b>Projects</b></p>
-              </div>
-            </div>
-        
-            <!-- Third Image Container -->
-            <div class="col-md-4" id="all" style="border-radius: 8px; background-color: #DDCFC8; height: 45vh; width: 300px;">
-              <div class="image-container" style="border-radius: 2px; padding-top: 20px;">
-                <img src="./assets/about.jpg" alt="Image 3" style="border-radius: 8px; height: 245px">
-                <div class="icon-overlay">
-                  <div class="icon-circle">
-                    <a href="#"> <i class="bi bi-eye"></i></a>
-                   
-                  </div>
-                  <div class="icon-circle">
-                    <a href=""><i class="bi bi-github"></i> </a>
-                  </div>
-
-                </div>
-              </div>
-              <div style="text-align: center; padding-top: 30px">
-                <p><b>Projects</b></p>
-              </div>
-            </div>
           </div>
-        </div>
-        
+      </div>
       </section>
 
-  <section id="Contact" style="background-color:; margin-top: 50px;"> 
+  <section id="Contact" style=" margin-top: 50px; width: 100%;" class="hidden" > 
     <div class=" p-3 pb-md-4 mx-auto text-center" style="width: 100%;">
       <h1 class="display-4 fw-normal ">Contact Me</h1>
     </div>
@@ -276,38 +252,38 @@
                 <textarea id="message" name="message" placeholder="Your message" rows="4"></textarea>
                 <p id="messageError" class="error-message"></p>
     
-                <button type="submit">Submit</button>
+                <button type="submit" class="submit-btn" style="background-color: #323232;">Submit</button>
                 <p id="formMessage"></p>
             </form>
       </div>
       <div class="contact-info" >
         <div class="col d-flex align-items-start">
-          <div class="icon-circle fs-4 me-3">
-            <i class="bi bi-telephone-fill" style="color: #DDCFC8;"></i>
+          <div class="icon-circle fs-4 me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-telephone-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;"></i>
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">Call Me</h3>
-            <p>08109917811 <br> 08101235312 <br> </p>
+            <p>07904111066  <br> </p>
           </div>
         </div>
 
         <div class="col d-flex align-items-start">
-          <div class="icon-square fs-4  me-3">
-            <i class="bi bi-briefcase-fill" style="color: #DDCFC8;"></i> 
+          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-briefcase-fill" style="color: #ffffff; padding-left: 7px; padding-top: 5px;"></i> 
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">E- mail</h3>
-            <p>abrahamayesoro@gmail.com <br>  </p>
+            <p>danielayesoro18@gmail.com<br>  </p>
           </div>
         </div>
 
         <div class="col d-flex align-items-start">
-          <div class="icon-square fs-4  me-3">
-            <i class="bi bi-geo-alt-fill" style="color: #DDCFC8;"></i>
+          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
+            <i class="bi bi-geo-alt-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;""></i>
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">Location</h3>
-            <p>Road 10, House 6 Yomi Ajetunmobi Street <br> </p>
+            <p>London, United Kingdom <br> </p>
           </div>
         </div>
         
@@ -316,18 +292,25 @@
 </section>
 
 
-  <footer class="py-3 ">
+  <footer class="py-3 " style="">
     <ul class="nav justify-content-center list-unstyled d-flex">
       <li class="px-4" ><a class="text-body-secondary" href="#"> <i class="bi bi-facebook" id="footer-list" ></i></a></li>
-      <li class="px-4" ><a class="text-body-secondary" href="#"><i class="bi bi-linkedin" id="footer-list"></i></a></li>
-      <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-github" id="footer-list"></i></li>
-        <li class="px-4"><a class="text-body-secondary" href="#"><i class="bi bi-instagram" id="footer-list"></i></li>
+      <li class="px-4" ><a class="text-body-secondary" href="https://www.linkedin.com/ayesoro-daniel"><i class="bi bi-linkedin" id="footer-list"></i></a></li>
+      <li class="px-4"><a class="text-body-secondary" href="https://www.GitHub.com/Dayesoro"><i class="bi bi-github" id="footer-list"></i></li>
+        <li class="px-4"><a class="text-body-secondary" href="https://www.instagram.com/a.___daniel/"><i class="bi bi-instagram" id="footer-list"></i></li>
     </ul>
     <br>
-    <h3 class="text-center" style="text-decoration: none;">We provide the best website designs for all our clients</h3>
-    <p class="text-center ">Copyright @ Ayesoro Daniel. All right reserved.</p>
+    <h3 class="text-center" style="text-decoration: none; color: white;">We provide the best website designs for all our clients</h3>
+    <p class="text-center "  style="color: white;">Copyright @ Ayesoro Daniel. All right reserved.</p>
   </footer>
-
-<script src="main.js"></script>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="main.js" ></script>
 </body>
 </html>
+
+
+
