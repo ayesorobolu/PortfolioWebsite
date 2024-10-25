@@ -17,7 +17,7 @@
   <div style="width: 100%; position: relative;">
     <header>
       <nav>
-        <div class="logo">Dan.</div>
+        <div class="logo">DAN</div>
             <ul class="nav-links">
                 <li><a href="#Home" class="active">Home</a></li>
                 <li><a href="#About">About</a></li>
@@ -34,15 +34,15 @@
     </header>
 
 
-      <section id="Home" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;">
+      <section id="Home" style="  margin-top: 50px; width: 100%;">
         <div class="container col-xxl-8 px-4 py-5 mt-3" style="width: 100%;">
 
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
-              <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-up" data-aos-delay="700">
+              <div class="col-10 col-sm-8 col-lg-6 hidden" data-aos="fade-up" data-aos-delay="700">
                 <img src="./assets/me2 copy.jpeg" class="d-block mx-lg-auto img-fluid rounded-circle image " id="img" alt="Bootstrap Themes"  loading="lazy" style="height: 300px; width: 300px;">
               </div>
 
-              <div class="col-lg-6" >
+              <div class="col-lg-6 hidden" >
                 <h3 class="lh-1 mb-3 txthello" style="padding-left: 0px;" id="home-txt1">Hi, I am</h3>
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 textname" id="home-txt2">Ayesoro Daniel</h1>
                 <p class="lead textinfo" id="home-txt3">An experienced frontend developer with a passion for creating visually stunningand user-friendly websites.</p>
@@ -59,19 +59,19 @@
 
 
 
-      <section id="About" style=" margin-top: 50px; width: 100%;"class="hidden" >
+      <section id="About" style="  margin-top: 50px; width: 100%;"class="" >
         <div class="container" style=" left: 0; right: 0; width: 100%; position: relative;  ">
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal text-body-emphasis">About Me</h1>
+            <h1 class="display-4 fw-normal text-body-emphasis hidden">About Me</h1>
           </div>
             <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 " id="sec2row">
-              <div >
+              <div class="hidden" >
                 <img src="./assets/about.jpg" alt="" class="about-pic" height="400px" width="400px" style="border-radius: 10px;">
               </div>
 
               <div class="col" >
                 <div class="row">
-                  <div class=" d-flex flex-column">
+                  <div class=" d-flex flex-column hidden">
 
                     <div class="exp-box">
                       <h3  class="fs-4 text-body-emphasis">  <i class="bi bi-mortarboard-fill " style="color: #DDCFC8;"></i> Education</h3>
@@ -82,10 +82,10 @@
 
                     </div>
 
-                    <p class="" style="padding-top: 10px;">I am well-versed in HTML, CSS and JavaScript , and other cutting edge
-                      frameworks and libraries,which allows me to implement interactive features.
-                      Additionally, I have experirence working with content management systems (CMS) like
-                      WordPress.</p>
+                    <p class="" style="padding-top: 10px;">A Software Engineer with a drive for crafting innovative solutions and problem-solving. I have a
+                      strong foundation in full-stack web development. I am an organised and team-oriented developer,
+                      who has worked in a fast-paced, deadline-driven organisation, which makes me very capable of
+                      adapting to different work environments.</p>
 
                   </div>
                 </div>
@@ -96,7 +96,7 @@
 
 
           <div class="container mt-5">
-            <h2 class="pb-2 border-bottom">Skills and Experiences</h2>
+            <h2 class="pb-2 mb-5  " >Skills and Experiences</h2>
             <div class="row">
               <!-- Technologies Section (Left Column) -->
               <div class="col-md-6">
@@ -176,7 +176,7 @@
                     <h3>Working as a Software Engineer</h3>
                     <p style="font-size: smaller; color: #DDCFC8;">Digital Futures</p>
                   </div>
-                  <div class="card mb-5 txt-box"style="background-color: #DDCFC8;" >
+                  <div class="card mb-5 txt-box"style="background-color: #DDCFC8;"1` >
                     <div class="card-body">
                       <h5 class="card-title" style="text-align: center;">Systems Engineer</h5>
                     </div>
@@ -188,16 +188,68 @@
           </div>
       </section>
 
-      <section id="Projects" style=" background-color: #DDCFC8; margin-top: 50px; width: 100%;" class="hidden">
+      <section id="Projects" style=" margin-top: 50px; width: 100%;" class="hidden">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-          <h1 class="display-4 fw-normal text-body-emphasis">My Projects</h1>
+          <h1 class="display-4 fw-normal" style="color: white;">My Projects</h1>
         </div>
         <div class="container mt-5 pb-5">
-          <h2 class="text-center mb-4">Browse My Recent <strong>Projects</strong></h2>
-          <div class="row project-row flex-direction:row" >
-              <!-- Project One -->
+          <h2 class="text-center mb-4" style="color: white;">Browse My Recent <strong>Projects</strong></h2>
+          <div class="container my-5">
+            <div class="row custom-row g-4">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card custom-card" >
+                        <div class="position-relative">
+                            <div class="info-bar"></div>
+                            <img src="./assets/fitnessvault.png" class="card-img-top rounded-3" alt="Project Image">
+                            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                <button class="icon-button"><i class="bi bi-github"> <a href="https://github.com/Dayesoro/FitnessVault" target="_blank"></a> </i></button>
+                                <button class="icon-button"><i class="bi bi-eye-fill"> <a href="https://fitnessvault.netlify.app" target="_blank"></a> </i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">FitnessVault</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card custom-card">
+                        <div class="position-relative">
+                            <div class="info-bar"></div>
+                            <img src="./assets/about.jpg" class="card-img-top rounded-3" alt="Project Image">
+                            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                <button class="icon-button"><i class="bi bi-github"></i></button>
+                                <button class="icon-button"><i class="bi bi-eye-fill"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Project</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card custom-card">
+                        <div class="position-relative">
+                            <div class="info-bar"></div>
+                            <img src="./assets/about.jpg" class="card-img-top rounded-3" alt="Project Image">
+                            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                <button class="icon-button"> <i class="bi bi-github"> </i> </button>
+                                <button class="icon-button"><i class="bi bi-eye-fill">  </i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+          <!-- <di v class="row project-row flex-direction:row" >
+              Project One
               <div class="col-md-4">
-                  <div class="card" id="project-card" >
+                  <div class="card hidden" id="project-card" >
                       <img src="./assets/fitnessvault.png"  alt="Project One" style="border-radius: 40px; padding: 15px;">
                       <div class="card-body text-center">
                           <h5 class="card-title">Fitness Vault</h5>
@@ -206,9 +258,9 @@
                       </div>
                   </div>
               </div>
-              <!-- Project Two -->
+              Project Two
               <div class="col-md-4">
-                  <div class="card" id="project-card">
+                  <div class="card hidden" id="project-card">
                       <img src="./assets/about.jpg" class="card-img-top" alt="Project Two">
                       <div class="card-body text-center">
                           <h5 class="card-title">Project Two</h5>
@@ -217,9 +269,9 @@
                       </div>
                   </div>
               </div>
-              <!-- Project Three -->
+              Project Three
               <div class="col-md-4">
-                  <div class="card" id="project-card">
+                  <div class="card hidden" id="project-card">
                       <img src="./assets/about.jpg" class="card-img-top" alt="Project Three" style="">
                       <div class="card-body text-center">
                           <h5 class="card-title">Project Three</h5>
@@ -229,16 +281,17 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
+      
       </section>
 
-  <section id="Contact" style=" margin-top: 50px; width: 100%;" class="hidden" > 
+  <section id="Contact" style=" margin-top: 50px; width: 100%;" class="" > 
     <div class=" p-3 pb-md-4 mx-auto text-center" style="width: 100%;">
       <h1 class="display-4 fw-normal ">Contact Me</h1>
     </div>
 
     <div class="contact-container" >
-      <div class="form-container">
+      <div class="form-container hidden">
               <form id="contactForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your name" >
@@ -256,10 +309,10 @@
                 <p id="formMessage"></p>
             </form>
       </div>
-      <div class="contact-info" >
+      <div class="contact-info hidden" >
         <div class="col d-flex align-items-start">
-          <div class="icon-circle fs-4 me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
-            <i class="bi bi-telephone-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;"></i>
+          <div class="icon-circle fs-4 me-3">
+            <i class="bi bi-telephone-fill" style="color: 323232;  padding-left: 7px; padding-top: 5px;"></i>
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">Call Me</h3>
@@ -268,8 +321,8 @@
         </div>
 
         <div class="col d-flex align-items-start">
-          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
-            <i class="bi bi-briefcase-fill" style="color: #ffffff; padding-left: 7px; padding-top: 5px;"></i> 
+          <div class="icon-square fs-4  me-3" >
+            <i class="bi bi-briefcase-fill" style="color: 323232; padding-left: 7px; padding-top: 5px;"></i> 
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">E- mail</h3>
@@ -278,8 +331,8 @@
         </div>
 
         <div class="col d-flex align-items-start">
-          <div class="icon-square fs-4  me-3" style="background-color:#DDCFC8; height: 38px; width: 38px; border-radius: 50%;">
-            <i class="bi bi-geo-alt-fill" style="color: #ffffff;  padding-left: 7px; padding-top: 5px;""></i>
+          <div class="icon-square fs-4  me-3">
+            <i class="bi bi-geo-alt-fill" style="color: 323232;  padding-left: 7px; padding-top: 5px;"></i>
           </div>
           <div>
             <h3 class="fs-3 text-body-emphasis">Location</h3>
