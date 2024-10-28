@@ -9,13 +9,12 @@
   .html{
   scroll-behavior: smooth;
   }
-  
-  body{
 
+  body, html {
+    overflow-x: hidden;
+}
 
-  }
-  
-  nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,15 +24,11 @@
     top: 0;
     z-index: 1000;
     background-color: white;
-    /* background-color:white; */
-    /* background-color: #DDCFC8; */
     padding: 10px;
     max-width: 100%;
   }
   
-  .logo {
-    margin-left: 40px;
-    /* DAN */
+.logo {
 width: 147px;
 height: 86px;
 font-family: 'Kalnia';
@@ -41,12 +36,9 @@ font-style: normal;
 font-weight: 400;
 font-size: 64px;
 line-height: 86px;
-/* identical to box height */
-text-align: right;
 color: #000000;
 text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
-
-  }
+}
   
   .nav-links {
     list-style: none;
@@ -69,7 +61,7 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
   }
   
   .nav-links a:hover {
-    color:#000000;
+    color:#FA7268;
     text-decoration: underline;
     text-underline-offset: 1rem;
   }
@@ -107,14 +99,12 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
     }
   
     #Home{
-      /* margin-top: 50px; */
-      /* height: 20px; */
-      background-image: url('./assets/'); /* Path to your SVG file */
-      background-size: cover; /* Cover the entire area */
-      background-repeat: no-repeat; /* Prevents tiling */
-      background-position: center; /* Center the background */
-
-    }
+background-image: url('./assets/layered-waves-haikei.svg'); /* Path to your SVG file */
+background-size: cover; /* Cover the entire area */
+background-repeat: no-repeat; /* Prevents tiling */
+background-position: center; 
+color: white;
+}
 
   h1, h2, h3 {
   letter-spacing: 1px;
@@ -124,16 +114,15 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
       width: 25%;
       height: 50px;
       padding: 10px;
-      background-color:#323232;
+      background-color:#FA7268;
       border: none;
       border-radius: 30px;
       cursor: pointer;
     }
-    
-    .cv-btn:hover {
-      background-color: #333333d3;
+
+    .cv-btn a{
+      text-decoration: none;
       color: white;
-      transition: background-color 0.3s ease;
     }
   
     .contact-btn{
@@ -141,17 +130,17 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
       height: 50px;
       padding: 10px;
       background-color: white;
-      color: #4C4B42;
-      border: solid #323232 2px;
+      border: none;
       border-radius: 30px;
       cursor: pointer;
     }
   
-    .contact-btn:hover{
-      background-color: #333333;
-      color: white;
-      transition: background-color 0.5s ease;
+    .contact-btn a{
+      text-decoration: none;
+      color: #001320;
     }
+
+
     .tech-icons img {
       width: 80px;
       height: 80px;
@@ -195,20 +184,7 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
     margin: 5px 0 10px;
     font-size: 0.9em;
   }
-  
-  button {
-    width: 30%;
-    padding: 10px;
-    background-color: #2844a7;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #5565e0;
-  }
+
   
   .form-container{
     margin-bottom: 100px;
@@ -218,6 +194,27 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
     flex: 0.5;
     padding-top: 35px;
     /* margin-left: 100px; */
+  }
+
+  .submit-btn{
+    width: 20%;
+    padding: 10px;
+    background-color:#001420;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer; 
+  }
+
+  .submit-btn:hover{
+    background-color:#001420cc;
+    transition: ease 0.4s ;
+  } 
+
+  #icon{
+    color: 323232; 
+     padding-left: 7px; 
+     padding-top: 5px;
   }
   
   .btn-custom{
@@ -230,9 +227,6 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
 
   #Projects{
     background-image: url('./assets/layered-waves-haikei.svg'); /* Path to your SVG file */
-    width: 100%;
-    left: 0;
-    right: 0;
     background-size: cover; /* Cover the entire area */
     background-repeat: no-repeat; /* Prevents tiling */
     background-position: center; /* Center the background */
@@ -246,7 +240,7 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
   }
   
   footer{
-  background-color: #323232;
+  background-color: #001320;
   height: 30vh;
   
   }
@@ -256,11 +250,7 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
     color: white;
   }
   #footer-list:hover{
-   color: #DDCFC8;  
-  }
-
-  .submit-btn{
-    border-radius: 20px;
+   color: #FA7268;  
   }
 
   .custom-card {
@@ -326,6 +316,21 @@ text-shadow: 8px 4px 8px rgba(0, 0, 0, 0.25);
 .custom-row {
     justify-content: center; /* Center the cards */
 }
+
+#card{
+background-color: #001320;
+}
+
+#first-box-txt{
+font-size: smaller;
+color: #FA7268;
+}
+
+#card-title{
+  color: white;
+  text-align: center;
+}
+
 
 
   

@@ -62,6 +62,8 @@ const observer = new IntersectionObserver((entries)  => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+
 // contact validation
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent form submission

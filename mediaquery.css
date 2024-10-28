@@ -1,8 +1,4 @@
-@media (max-width: 1200px) {
-  .card img {
-      height: 220px;
-  }
-}
+
 /* For tablets and medium-sized screens (below 900px) */
 @media (max-width: 995px) {
     .container {
@@ -13,7 +9,7 @@
           right: 0;
           height: 100vh;
           top: 0;
-          background-color:aliceblue;
+          background-color:white;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -57,39 +53,35 @@
     font-size: 1.8rem;
   }
 
-  .container {
-    padding: 0 30px;
-  }
-
 .card img {
-height: 180px;
+height: 200px;
 }
 
-/* .second-timeline{
-  padding-top: 130px;
-} */
+.info-bar{
+  top: 170px;
+  left: 70px;
+} 
+
+.second-timeline{
+  padding-top: 60px;
+}
 
 .txt-box{
   width: 295px;
 }
 
-.col-md-6{
-  /* padding-left: 50px; */
-}
 .about-pic{
   width: 300px;
   height: 300px;
 }
-  }
 
-  /* For mobile screens (below 600px) */
+}
+
+/* For mobile screens (below 600px) */
   @media (max-width: 600px) {
     .logo {
         font-size: 30px;
     }
-    /* .nav-links a {
-        font-size: 14px;
-    } */
 
   .container h1 {
     font-size: 1.5rem;
@@ -120,16 +112,10 @@ height: 180px;
   .footer p {
     font-size: 12px;
   }
-  .card img {
-height: 150px;
-}
+
 h2 {
 font-size: 1.5rem;
 }
-.btn-custom {
-padding: 4px 10px;
-font-size: 0.8rem;
- } 
 
  .txt-box{
   width: 365px;
@@ -142,9 +128,19 @@ width: 50%;
 .contact-btn{
 width: 45%;
 }
+#exp-right-column{
+  margin-left: 16px;
+  margin-top: 30px;
+ }
+
+.info-bar{
+  top: 170px;
+  left: 105px;
 }
 
-  /* For extra small mobile screens (below 400px) */
+}
+
+/* For extra small mobile screens (below 400px) */
   @media (max-width: 400px) {
 .cv-btn{
 width: 50%;
@@ -163,27 +159,16 @@ text-align: center;
 }
  
 #home-txt2{
- display: flex;
-justify-content: center;
 text-align: center; 
 }
 
 #home-txt3{
-display: flex;
-justify-content: center;
 text-align: center; 
 }
 
-
-/* .all-btn{
- display: flex;
-justify-content: space-evenly;
- } */
-
  .about-pic{
   height:200px; 
-  width:260px;
-
+  width:293px;
  }
 
  .txt-box{
@@ -192,6 +177,11 @@ justify-content: space-evenly;
 
  .exp-box-text{
   flex-direction: column;
+ }
+
+ #exp-right-column{
+  margin-left: 16px;
+  margin-top: 30px;
  }
 
  #all {
@@ -203,18 +193,22 @@ margin-bottom: 20px;
   padding-top: 10px;
 }
 
-.card img {
- height: 130px;
+.card-img-top{
+  height:380px; 
 }
+
+.info-bar{
+  top: 170px; 
+  left: 102px;
+}
+
 h2 {
  font-size: 1.2rem;
 }
-.btn-custom {
-padding: 3px 8px;
-font-size: 0.7rem;
-}
- .project-row{
-  gap: 20px;
+
+.submit-btn{
+  width: 50%;
  }
+
 }
 
